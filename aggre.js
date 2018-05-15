@@ -1,19 +1,19 @@
 window.addEventListener('DOMContentLoaded', function() {
-	var options = {// オプションを追加してくだしあ
+	var options = {// クラス名など
 		active: 'active',
 		fixed: 'fixed'
 	}
-	var elems = {// ターゲットにしたい要素を追加してくだしあ
+	var elems = {// ターゲットにしたい要素
 		a: document.getElementsByTagName('a'),
 		div: document.getElementsByTagName('div'),
 		img: document.getElementsByTagName('img')
 	}
-	var events = {// イベントを追加してくだしあ
+	var events = {// イベント
 		click: 'click',
 		load: 'load',
 		ready: 'DOMContentLoaded'
 	}
-	var funcs = {// 処理を追加してくだしあ
+	var funcs = {// 処理
 		cons: function(elem) {
 			console.log(elem);
 		},
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			}
 		}
 	}
-	var agg = function(elem, event, myFunc) {// ここは触らないで！
+	var agg = function(elem, event, myFunc) {// 本体
 		var arr = elem.length;
 		for (var i = 0; i < arr; i++) {
 			elem[i].addEventListener(event, function() {
